@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Header Component - Skillvation</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            primary: '#1976d2',
+            'primary-light': '#4791db',
+            'primary-dark': '#115293',
+            surface: '#ffffff',
+            'surface-container': '#f9fafb',
+            'on-surface': '#1f2937',
+            'on-surface-variant': '#4b5563',
+            outline: '#e5e7eb',
+          },
+          spacing: {
+            'section-gap': '4rem',
+            'gutter': '2rem',
+            'margin-mobile': '1rem',
+          },
+          maxWidth: {
+            'container-max': '1280px',
+          },
+          borderRadius: {
+            'card': '0.5rem',
+            'image': '1rem',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1f2937;
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- BEGIN: TopNavBar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-outline/30 shadow-sm transition-all duration-300"
+    id="navbar">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter h-16 flex justify-between items-center">
+
+      <!-- Logo -->
+      <a class="flex items-center gap-2 scale-95 active:scale-90 transition-transform" href="/">
+        <img alt="Skillvation Logo" class="h-8 w-auto" src="./img/logo.png" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex gap-6 items-center">
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm font-medium"
+          href="#">Home</a>
+        <a class="text-primary font-bold border-b-2 border-primary py-1 text-sm"
+          href="./Skill2School.html">Skill 2 Skool</a>
+        <!-- <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm font-medium"
+          href="#">Camps</a> -->
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm font-medium"
+          href="./Upskill4Teacher.html">Upskill 4 Teacher</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm font-medium"
+          href="./TTT.html">TTT</a>
+      </nav>
+
+      <!-- Auth Buttons -->
+      <div class="flex items-center gap-4">
+        <button
+          class="hidden md:block text-primary font-medium hover:text-primary-dark transition-colors text-sm">
+          Sign Up
+        </button>
+        <button
+          class="hidden md:block text-primary font-medium hover:text-primary-dark transition-colors text-sm">
+          SSO Log In2
+        </button>
+        <button
+          class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">
+          Login
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button (hamburger) -->
+      <button
+        class="md:hidden flex flex-col gap-1.5 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+        aria-label="Open menu"
+        id="mobile-menu-btn">
+        <span class="block w-6 h-0.5 bg-on-surface transition-all"></span>
+        <span class="block w-6 h-0.5 bg-on-surface transition-all"></span>
+        <span class="block w-6 h-0.5 bg-on-surface transition-all"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="md:hidden hidden bg-white border-t border-outline/30 px-margin-mobile py-4 space-y-3" id="mobile-menu">
+      <a class="block text-on-surface-variant hover:text-primary transition-colors text-sm font-medium py-1"
+        href="#">Home</a>
+      <a class="block text-primary font-bold text-sm py-1"
+        href="#">Skill 2 Skool</a>
+      <a class="block text-on-surface-variant hover:text-primary transition-colors text-sm font-medium py-1"
+        href="#">Camps</a>
+      <a class="block text-on-surface-variant hover:text-primary transition-colors text-sm font-medium py-1"
+        href="./Upskill4Teacher.html">Upskill 4 Teacher</a>
+      <a class="block text-on-surface-variant hover:text-primary transition-colors text-sm font-medium py-1"
+        href="#">TTT</a>
+      <div class="pt-2 flex flex-col gap-2 border-t border-outline/20">
+        <button class="text-primary font-medium text-sm text-left">Sign Up</button>
+        <button class="text-primary font-medium text-sm text-left">SSO Log In</button>
+        <button
+          class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-full text-sm font-medium transition-colors w-full">
+          Login
+        </button>
+      </div>
+    </div>
+
+  </header>
+  <!-- END: TopNavBar -->
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+
+</html>

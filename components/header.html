@@ -1,0 +1,72 @@
+<!-- BEGIN: TopNavBar -->
+<header
+  class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-outline/30 shadow-sm transition-all duration-300"
+  id="navbar">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter h-16 flex justify-between items-center">
+
+    <!-- Logo -->
+    <a class="flex items-center gap-2 scale-95 active:scale-90 transition-transform" href="./index.html">
+      <img alt="Skillvation Logo" class="h-8 w-auto" src="./img/logo.png" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex gap-6 items-center" id="main-nav">
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm font-medium"
+        href="#" data-page="home">Home</a>
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm font-medium"
+        href="./Skill2School.html" data-page="skill2school">Skill 2 Skool</a>
+      <!-- <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm font-medium"
+        href="#">Camps</a> -->
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm font-medium"
+        href="./Upskill4Teacher.html" data-page="upskill4teacher">Upskill 4 Teacher</a>
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm font-medium"
+        href="./TTT.html" data-page="ttt">TTT</a>
+    </nav>
+
+    <!-- Auth Buttons -->
+    <div class="flex items-center gap-4">
+      <button class="hidden md:block text-primary font-medium hover:text-primary-dark transition-colors text-sm">
+        Sign Up
+      </button>
+      <button class="hidden md:block text-primary font-medium hover:text-primary-dark transition-colors text-sm">
+        SSO Log In
+      </button>
+      <button class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">
+        Login
+      </button>
+
+      <!-- Mobile Hamburger -->
+      <button
+        class="md:hidden flex flex-col gap-1.5 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+        aria-label="Open menu"
+        id="mobile-menu-btn">
+        <span class="block w-6 h-0.5 bg-on-surface transition-all"></span>
+        <span class="block w-6 h-0.5 bg-on-surface transition-all"></span>
+        <span class="block w-6 h-0.5 bg-on-surface transition-all"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div class="md:hidden hidden bg-white border-t border-outline/30 px-margin-mobile py-4 space-y-3" id="mobile-menu">
+    <a class="mobile-nav-link block text-on-surface-variant hover:text-primary transition-colors text-sm font-medium py-1"
+      href="./index.html" data-page="home">Home</a>
+    <a class="mobile-nav-link block text-on-surface-variant hover:text-primary transition-colors text-sm font-medium py-1"
+      href="./Skill2School.html" data-page="skill2school">Skill 2 Skool</a>
+    <!-- <a class="mobile-nav-link block text-on-surface-variant hover:text-primary transition-colors text-sm font-medium py-1"
+      href="#">Camps</a> -->
+    <a class="mobile-nav-link block text-on-surface-variant hover:text-primary transition-colors text-sm font-medium py-1"
+      href="./Upskill4Teacher.html" data-page="upskill4teacher">Upskill 4 Teacher</a>
+    <a class="mobile-nav-link block text-on-surface-variant hover:text-primary transition-colors text-sm font-medium py-1"
+      href="./TTT.html" data-page="ttt">TTT</a>
+    <div class="pt-2 flex flex-col gap-2 border-t border-outline/20">
+      <button class="text-primary font-medium text-sm text-left">Sign Up</button>
+      <!-- <button class="text-primary font-medium text-sm text-left">SSO Log In</button> -->
+      <a href="https://sso.myskool.club/login?client_id=skillvation&redirect_uri=https%3A%2F%2Fskillvation.com%2Fcallback&state=4jWtX7gbTl2fWjN2" class="text-primary font-medium text-sm text-left">SSO Log In</a>
+      <button class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-full text-sm font-medium transition-colors w-full">
+        Login
+      </button>
+    </div>
+  </div>
+</header>
+<!-- END: TopNavBar -->

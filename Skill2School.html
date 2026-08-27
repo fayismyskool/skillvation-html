@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Skill 2 Skool - Skillvation</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            primary: '#1976d2',
+            'primary-light': '#4791db',
+            'primary-dark': '#115293',
+            surface: '#ffffff',
+            'surface-container': '#f9fafb',
+            'on-surface': '#1f2937',
+            'on-surface-variant': '#4b5563',
+            outline: '#e5e7eb',
+          },
+          spacing: {
+            'section-gap': '4rem',
+            'gutter': '2rem',
+            'margin-mobile': '1rem',
+          },
+          maxWidth: {
+            'container-max': '1280px',
+          },
+          borderRadius: {
+            'card': '0.5rem',
+            'image': '1rem',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1f2937;
+      background-color: #ffffff;
+    }
+
+    .text-gradient {
+      background: linear-gradient(90deg, #1976d2 0%, #4791db 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    }
+
+    .blob-shape {
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      overflow: hidden;
+    }
+
+    .curved-divider {
+      position: relative;
+      background: #f9fafb;
+      height: 100px;
+      overflow: hidden;
+    }
+
+    .curved-divider::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    }
+  </style>
+</head>
+
+<body class="antialiased overflow-x-hidden">
+
+  <!-- Shared Header -->
+  <div id="header-placeholder"></div>
+
+  <main class="pt-16">
+    <!-- BEGIN: Hero Section -->
+    <section class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden bg-[#e0f0ff]">
+      <div class="absolute inset-0 z-0 opacity-20">
+        <img alt="Students cheering" class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUYC7eKIiyFoTvzMIfyJR8x7NqwZo5tvtU2ADBk4nccg1GlzO0BAm2zAnt9B4qNf_DDXo2xBmVop1d1PwqzS4w514XX2htixzf3vq9Mk_tgoNTmGMa0X12fr5Hj9RWfiPIQTxC7e066S-3Z4Yf8U0RgejE_B-5NrOPQdxQ34dkoPUKhyMExAm5cycdNLB-sdsLtkAOnoCLONen2k7RnwK62zccGPlwMlQ0qpX-_PfS5xU6XW0au6ER1A" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#1976d2] z-0"></div>
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10 text-center text-white mt-32">
+        <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">Equip Your Students With Future Ready
+          Skills<br />That Matter</h1>
+        <p class="text-lg md:text-xl max-w-4xl mx-auto opacity-90 leading-relaxed">
+          Skill 2 Skool enables schools to deliver new-age skill education aligned with NEP 2020, NCF 2023, SAFAL, and
+          SQAAF, ensuring students are prepared not just for assessments—but for life beyond the classroom. Our skill
+          ecosystem is designed to complement academics while strengthening competency, confidence, and real-world
+          readiness.
+        </p>
+      </div>
+    </section>
+    <!-- END: Hero Section -->
+    <!-- BEGIN: Video/Promo Section -->
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter -mt-16 relative z-20 mb-24">
+      <div class="rounded-xl overflow-hidden shadow-2xl bg-white border border-outline/20 p-2">
+        <img alt="Camps Inspired Learning" class="w-full h-auto rounded-lg object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5nAJZ-TIlEBPf6oWj7upOksUq6HuKDBA7x-0NIS66W01UZbEeU0quA_dPqraAoLdiPvBfWJEE9jSYrhmTsr16T0QaOlNcA9vYhZEyaIkovaYjVpSF_I5Tv5F81h73Y6nuIwTp0ScRaSOjdKSDayf3uNffduqfpd1R2_sVlV3f7kFChNauZ_S2BQJJCVNdVNn9lZoW4ya-QpjRRk3alAOAo7v6sGA-94m4B-DRX6IJHpayAofZRtQWWg" />
+      </div>
+      <div class="text-center mt-8">
+        <button
+          class="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full font-medium transition-colors shadow-md">Request
+          For Demo</button>
+      </div>
+    </section>
+    <!-- END: Video/Promo Section -->
+    <!-- BEGIN: Framework Section -->
+    <section class="py-16 max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center">
+      <p class="text-primary font-semibold mb-2 text-sm uppercase tracking-wider">Skill 2 Skool Skill Framework</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-on-surface">Structured. Aligned. Measurable</h2>
+      <p class="text-on-surface-variant max-w-2xl mx-auto mb-12">Skill 2 Skool provides schools with a structured skill
+        framework that focuses on</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+        <!-- Card 1 -->
+        <div class="bg-surface-container rounded-xl p-6 border border-outline/30 feature-card flex flex-col h-full">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-primary">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-on-surface">Competency-based learning</h3>
+          <p class="text-on-surface-variant text-sm flex-grow">We provide simple, practical learning tools that help
+            teachers upgrade skills and stay confident in the classroom</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-surface-container rounded-xl p-6 border border-outline/30 feature-card flex flex-col h-full">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-primary">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path
+                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-on-surface">Experiential and application-oriented pedagogy</h3>
+          <p class="text-on-surface-variant text-sm flex-grow">Our structured courses, expert guidance, and real-world
+            strategies support every stage of a teacher's professional growth.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-surface-container rounded-xl p-6 border border-outline/30 feature-card flex flex-col h-full">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-primary">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2"></path>
+              <path
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-on-surface">Observable and documentable student outcomes</h3>
+          <p class="text-on-surface-variant text-sm flex-grow">Our structured courses, expert guidance, and real-world
+            strategies support every stage of a teacher's professional growth.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-surface-container rounded-xl p-6 border border-outline/30 feature-card flex flex-col h-full">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-primary">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path
+                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-on-surface">Seamless integration into existing school systems</h3>
+          <p class="text-on-surface-variant text-sm flex-grow">Our structured courses, expert guidance, and real-world
+            strategies support every stage of a teacher's professional growth.</p>
+        </div>
+      </div>
+    </section>
+    <!-- END: Framework Section -->
+    <!-- BEGIN: Strengths Section -->
+    <section class="py-16 text-center max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+      <p class="text-primary font-semibold mb-2 text-sm uppercase tracking-wider">Skill Readiness &amp; Student Mapping
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-on-surface">Understanding Strengths Beyond Marks</h2>
+      <p class="text-on-surface-variant max-w-3xl mx-auto text-lg">
+        Skill 2 Skool supports schools in identifying and nurturing student strengths through structured observation,
+        reflection, and skill mapping. By focusing on aptitude, interest, and behaviour patterns, schools gain deeper
+        insights into student potential—supporting informed guidance, confidence building, and holistic development
+      </p>
+    </section>
+    <!-- END: Strengths Section -->
+    <!-- BEGIN: Active Participation Section -->
+    <section class="py-16 relative overflow-hidden">
+      <!-- Decorative circle -->
+      <img alt="" class="absolute left-0 top-1/2 -translate-y-1/2 w-48 opacity-20 pointer-events-none"
+        src="https://lh3.googleusercontent.com/aida/AEtjO1Xs-d1A0pQMKAfCUk3vZnrIKCvI0E2C12fyQpdKvQAXzW4Xa1lwm0MfZJ8BallqHHP3ePQIxdQMuVwEHfd5QHMPcwHJJFtwTCY4ZM3oDPYc_gXFLDLAh4z4Yp7mk0yN-2g3VmIVTYyDlTNBX1EuX8Z7nIofBntcSb-nmhqM-0H_QbQuyXupc-ZW2tNdEccRIdjMHFv7bi0kSu9gfi11fmlZEY26kORjHMf-TGEXX8vcxwudXQTUYCfFsMLj" />
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+        <div class="text-center mb-12">
+          <p class="text-primary font-semibold mb-2 text-sm uppercase tracking-wider">Skill Readiness &amp; Student
+            Mapping</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-on-surface">Start Learning What Matters</h2>
+          <p class="text-on-surface-variant italic">No Course Found</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 relative">
+            <div class="blob-shape">
+              <img alt="Teacher and students in science lab" class="w-full h-auto object-cover"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1XIVrzq4PrmEOmNWNFNnrsLmddiPaR_VGapRq202KiCVa90IW2RfuYiQY2jgBB1N1fC8Y6OmzKA1wJsAESCLrcoPqFeNTdrWqKZhssl_3xZpF1q81wR15YNbJKgrzyXJDxC5lx0kYf4KXSZCiSaKmEI7h7NRwK5kO9sGJxjg6ITXnsHtgo4DPuIt_7ifTnB4xWdSNRU8Ff3KH-nkRTGu9a5HtqfS-VEi2LoRh_gHqQ0wYljOHhFc4lPk9c" />
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <p class="text-primary font-semibold mb-2 text-sm uppercase tracking-wider">Engaging Skill Learning</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-on-surface">Designed for Active Participation</h2>
+            <p class="text-on-surface-variant mb-8 text-lg">
+              Our learning design emphasizes student engagement, interaction, and application. This approach improves
+              retention, participation, and skill transfer, moving learning beyond passive instruction
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="text-primary mt-1 text-xl leading-none">•</span>
+                <span class="text-on-surface-variant">Activity-driven session</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-primary mt-1 text-xl leading-none">•</span>
+                <span class="text-on-surface-variant">Collaborative tasks and challenges</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-primary mt-1 text-xl leading-none">•</span>
+                <span class="text-on-surface-variant">Real-world scenarios and simulations</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-primary mt-1 text-xl leading-none">•</span>
+                <span class="text-on-surface-variant">Reflection and presentation opportunities</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Active Participation Section -->
+    <!-- BEGIN: Ecosystem Section -->
+    <section class="py-20 bg-surface-container relative">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center">
+        <p class="text-primary font-semibold mb-2 text-sm uppercase tracking-wider">Skill Readiness &amp; Student
+          Mapping</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-on-surface">A Skill Ecosystem for Your School</h2>
+        <p class="text-on-surface-variant max-w-3xl mx-auto text-lg mb-12">
+          Skill 2 Skool enables schools to offer exposure to diverse skill domains, supporting well-rounded development
+          across cognitive, creative, digital, and life skills. These domains collectively contribute to
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16 text-left">
+          <div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+            <span class="text-primary mt-1 text-xl leading-none">•</span>
+            <span class="text-on-surface-variant font-medium">Problem-solving and critical thinking</span>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+            <span class="text-primary mt-1 text-xl leading-none">•</span>
+            <span class="text-on-surface-variant font-medium">Creativity and innovation</span>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+            <span class="text-primary mt-1 text-xl leading-none">•</span>
+            <span class="text-on-surface-variant font-medium">Digital awareness and responsibility</span>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+            <span class="text-primary mt-1 text-xl leading-none">•</span>
+            <span class="text-on-surface-variant font-medium">Communication and collaboration</span>
+          </div>
+        </div>
+        <div class="w-full max-w-4xl mx-auto">
+          <img alt="Illustration of teacher and students" class="w-full h-auto"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1VZwLDa1jO1IyiEW-YOk4lPShH7EHEkIjF7YUHTimlW-CD1r774yCxoWwCBH4UJrIp6FWzISj85mq9E5rDC1tVmea-K2PgPO4ccpUb5DuPfPILY9XZFDvdKShBRU6960q2pJsLVlv4mLng1_mBDiz5ZiTcZoyr7JBTrdMv-UosR8OEjCCGrEqFjd8VTSY4gcf-zx4emelm5M2UuWg_R6HN5zFMyBs-USe3U1nPUjqlmT4ToNGscT5ZP1JTH" />
+        </div>
+      </div>
+    </section>
+    <!-- END: Ecosystem Section -->
+    <!-- Curved divider -->
+    <div class="curved-divider border-b border-primary"></div>
+    <!-- BEGIN: SAFAL & SQAAF Section -->
+    <section class="py-20 relative overflow-hidden">
+      <!-- Decorative splatters -->
+      <img alt="" class="absolute left-0 top-0 w-64 opacity-10 pointer-events-none transform -scale-x-100"
+        src="https://lh3.googleusercontent.com/aida/AEtjO1U0Ajw6554mKgfWzEryylALELny6YvnHTQop7TsGX-F8gizC8s3fS1Zb6rpXNbjLMeBTRolq--iysWDH9tcVJ-9KfMsJZSHWvzUhZRsV13Mfg_aQHy7ilXFTwr0KvzMyfzcg2Kbj0vm6qVedbYFrBIe0qEV_BoB0y61S9vrPhtaFOv47-ogNirf_FKUp9rJSRxi8QuuypZISH87mywlDC1YqEAS7Su8c7TTiRlNrCXRoshPQ8EdBoybQ1FA" />
+      <img alt="" class="absolute right-0 bottom-0 w-64 opacity-10 pointer-events-none"
+        src="https://lh3.googleusercontent.com/aida/AEtjO1U0Ajw6554mKgfWzEryylALELny6YvnHTQop7TsGX-F8gizC8s3fS1Zb6rpXNbjLMeBTRolq--iysWDH9tcVJ-9KfMsJZSHWvzUhZRsV13Mfg_aQHy7ilXFTwr0KvzMyfzcg2Kbj0vm6qVedbYFrBIe0qEV_BoB0y61S9vrPhtaFOv47-ogNirf_FKUp9rJSRxi8QuuypZISH87mywlDC1YqEAS7Su8c7TTiRlNrCXRoshPQ8EdBoybQ1FA" />
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+        <div class="text-center mb-16">
+          <p class="text-primary font-semibold mb-2 text-sm uppercase tracking-wider">Skill Readiness &amp; Student
+            Mapping</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-on-surface">Alignment with SAFAL &amp; SQAAF</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+          <div class="rounded-image overflow-hidden shadow-lg">
+            <img alt="Teacher in classroom" class="w-full h-auto object-cover rounded-xl"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1VBDJf4UgM3VvbBC0nwKnLnOpQxw3QqMwmqPtAvXdGxuWc0b5NVgEyU_IdklBOYqEnwekoMp_nCiy44GoHs3gSZjki9c5YyarzAr3HYgwCleas7_3GkMSEKRaAz39xJkswjRIcWOMtT7fUsjIUAK2aDTwVKmJUc-QK-JBrH-RAUze3GsJfdWA_jBX5GxszTGoFjLNS22Sy6bKRz5OkJ4nKZgo0HVpE4pY3wBdu95YauDflWveXhqGwEBKLH" />
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-on-surface">Skill 2 Skool contributes to key SQAAF domains,
+              including</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-3">
+                <span class="text-primary text-xl leading-none">•</span>
+                <span class="text-on-surface-variant text-lg">Curriculum &amp; Pedagogy</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary text-xl leading-none">•</span>
+                <span class="text-on-surface-variant text-lg">Student Development</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary text-xl leading-none">•</span>
+                <span class="text-on-surface-variant text-lg">Teaching-Learning Practices</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary text-xl leading-none">•</span>
+                <span class="text-on-surface-variant text-lg">School Culture &amp; Quality Processes</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 text-right">
+            <h3 class="text-2xl font-bold mb-6 text-on-surface">Skill 2 Skool strengthens competencies assessed under
+              SAFAL by promoting</h3>
+            <ul class="space-y-4 inline-block text-left">
+              <li class="flex items-center gap-3 justify-end">
+                <span class="text-on-surface-variant text-lg">Application-based learning</span>
+                <span class="text-primary text-xl leading-none">•</span>
+              </li>
+              <li class="flex items-center gap-3 justify-end">
+                <span class="text-on-surface-variant text-lg">Reasoning and analytical thinking</span>
+                <span class="text-primary text-xl leading-none">•</span>
+              </li>
+              <li class="flex items-center gap-3 justify-end">
+                <span class="text-on-surface-variant text-lg">Communication and expression</span>
+                <span class="text-primary text-xl leading-none">•</span>
+              </li>
+              <li class="flex items-center gap-3 justify-end">
+                <span class="text-on-surface-variant text-lg">Student confidence and engagement</span>
+                <span class="text-primary text-xl leading-none">•</span>
+              </li>
+            </ul>
+          </div>
+          <div class="order-1 md:order-2 rounded-image overflow-hidden shadow-lg">
+            <img alt="Student thumbs up" class="w-full h-auto object-cover rounded-xl"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1XQeT8QLi2YnDE1sqstg5tWhmimMp0VGPrMobdRQLQ25y8q71KwYk5VusdR_D1rV-qrDL7E1pxMhd0C9JJ4xIe0Zmom7HX6fLZHlJRbkiJs5fuas_UPO70qPpgzZukR4V0ciN3kUf2EMYazSiPkNEbM3UOfRiPUL_0uoKRFv22dUQo1cqd6phv0eXkwmkVcdgMNlwiVUoJuNB1htQ-nMSS1LFU93YO2Lai_DVdiUuRgtP4vd8hI4QuAnSs" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: SAFAL & SQAAF Section -->
+  </main>
+
+  <!-- Shared Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load shared header & footer -->
+  <script src="./components/nav.js"></script>
+
+</body>
+</html>
